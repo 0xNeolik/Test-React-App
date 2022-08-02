@@ -1,4 +1,3 @@
-import "./App.css";
 import React, { useState } from "react";
 
 function App() {
@@ -9,10 +8,12 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className="App" data-test="component-app">
       <h1>App counter Testing</h1>
-      <h2>The count is {counter}</h2>
-      <button onClick={increaseCounter}>Click me to increase</button>
+      <h2 data-test="component-counter-display">The count is {counter}</h2>
+      <button onClick={increaseCounter} data-test="component-counter-button">
+        Click me to increase
+      </button>
     </div>
   );
 }
